@@ -1,37 +1,59 @@
 .PortfolioBlock {
   min-height: calc(100vh - 10rem);
-}
-
-.main-section {
-  width: 80vw;
-  margin: 0 auto;
+  padding: 160px 7.5% 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0;
+  transform: 2s;
 }
 
 .item {
-  margin-top: 10vh;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  border: 1px solid red;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
 }
 
-.text-area {
-  width: 50%;
+.protfolio-text {
+  width: 41.4%;
+  padding-right: 3.5%;
   vertical-align: middle;
-  text-align: left;
-  letter-spacing: 2px;
-  font-size: 1.25rem;
-  border: 1px solid red;
+}
+
+.text-main-title {
+  line-height: 1;
+  font-size: 16px;
+  font-size: 1.14286rem;
+  line-height: 1;
+}
+
+.text-sub-title {
+  color: #9e9e9e;
+  line-height: 1;
+  margin-top: 0.5rem;
+}
+
+.protfolio-img {
+  flex: 1;
 }
 
 .img-box {
-  width: 50%;
-  border: 1px solid red;
+  width: 100%;
+  height: 100%;
 }
 
 .img-area {
-  height: 100%;
   width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+
+.img-area:hover {
+  opacity: 0.825;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

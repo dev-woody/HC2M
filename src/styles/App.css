@@ -2,8 +2,181 @@ body {
   width: 100vw;
 }
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 87.5%;
+  font-size: 14px;
+  line-height: 2;
+  vertical-align: baseline;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  font-family: "Helvetica Neue", "Yu Gothic Medium", -apple-system,
+    "Hiragino Kaku Gothic ProN", meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+  color: #212121;
+  list-style: none;
+  text-decoration: none;
+}
+
 .App {
-  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.App-logo {
+  pointer-events: none;
+  opacity: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: 1s;
+}
+
+.Logo-box {
+  max-width: 40vw;
+  height: auto;
+}
+
+.logoShow {
+  opacity: 1;
+}
+
+.loading-finish {
+  opacity: 1;
+}
+
+.imgZoom-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #9e9e9e;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgActive {
+  opacity: 1;
+  z-index: 2;
+}
+
+.ZoomImg {
+  width: 80vw;
+  height: auto;
 }
 
 @media (max-width: 768px) {
