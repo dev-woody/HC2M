@@ -1,40 +1,14 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import "../styles/Layout.css";
 
-const throttle = function (callback, waitTime) {
-  let timerId = null;
-  return (e) => {
-    if (timerId) return;
-    timerId = setTimeout(() => {
-      callback.call(this, e);
-      timerId = null;
-    }, waitTime);
-  };
-};
-
-const HeaderWrap = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  transition: 0.5s ease-in-out;
-  opacity: 1;
-  &.hide {
-    opacity: 0;
-  }
-`;
-
-const Layout = () => {
-  const [btnActive, setBtnActive] = useState("portfolio");
-  const [isMenuShow, setIsMenuShow] = useState(false);
-
+const Layout = ({ btnActive, setBtnActive }) => {
+  const [showMenu, setShowMenu] = useState(false);
   const onToggleActive = (e) => {
     setBtnActive(e.target.name);
+    setShowMenu(false);
   };
 
   return (
@@ -47,37 +21,50 @@ const Layout = () => {
             onClick={onToggleActive}
           ></Link>
         </h1>
-        <nav className="" id="global-nav">
+        <nav
+          className=""
+          id="global-nav"
+          // style={showMenu ? { display: "table" } : { display: "none" }}
+        >
           <ul>
-            <li className={btnActive === "portfolio" ? " on" : ""}>
+            <li
+              id="menu-btn"
+              className={btnActive === "portfolio" ? " on" : ""}
+            >
               <Link name="portfolio" onClick={onToggleActive} to="/portfolio">
-                PORTFOLIO
+                {btnActive === "portfolio" ? (
+                  <span>PORTFOLIO</span>
+                ) : (
+                  "PORTFOLIO"
+                )}
               </Link>
             </li>
-            <li className={btnActive === "about" ? " on" : ""}>
+            <li id="menu-btn" className={btnActive === "about" ? " on" : ""}>
               <Link name="about" onClick={onToggleActive} to="/about">
-                ABOUT
+                {btnActive === "about" ? <span>ABOUT</span> : "ABOUT"}
               </Link>
             </li>
-            <li className={btnActive === "contact" ? " on" : ""}>
+            <li id="menu-btn" className={btnActive === "contact" ? " on" : ""}>
               <Link name="contact" onClick={onToggleActive} to="/contact">
-                CONTACT
+                {btnActive === "contact" ? <span>CONTACT</span> : "CONTACT"}
               </Link>
             </li>
-            <li className={btnActive === "plan" ? " on" : ""}>
+            <li id="menu-btn" className={btnActive === "plan" ? " on" : ""}>
               <Link name="plan" onClick={onToggleActive} to="/plan">
-                PLAN
+                {btnActive === "plan" ? <span>PLAN</span> : "PLAN"}
               </Link>
             </li>
           </ul>
         </nav>
-        <div id="sp-menu"></div>
+        <div id="sp-menu" onClick={() => setShowMenu(!showMenu)}></div>
       </header>
       <main>
         <Outlet />
       </main>
       <footer className="" id="footer">
-        <p className="copyright">Copyrights HC2M, All rights reserved.</p>
+        <p className="copyright">
+          <small>Copyrights HC2M, All rights reserved.</small>
+        </p>
       </footer>
     </div>
   );

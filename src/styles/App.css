@@ -3344,6 +3344,7 @@ h4,
 h5,
 h6,
 p,
+iframe,
 blockquote,
 pre,
 a,
@@ -3480,7 +3481,8 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+iframe {
   display: block;
 }
 
@@ -3572,7 +3574,7 @@ section {
 @media screen and (max-width: 768px) {
   /* line 199, ../../source/sass/style.scss */
   #header h1 a {
-    width: 40.5px;
+    width: 60px;
     height: 20px;
   }
 }

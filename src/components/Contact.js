@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Fade } from "react-reveal";
 
 import "../styles/Contact.css";
@@ -27,28 +27,57 @@ const textArea = {
   borderRadius: "5px",
 };
 
-const Contact = () => {
+const Contact = ({ btnActive, setBtnActive }) => {
+  const [userName, setUserName] = useState("");
+  const [phoneNb, setPhoneNb] = useState("");
+  const [inquiry, setInquiry] = useState("");
+  useEffect(() => {
+    setBtnActive("contact");
+    console.log("리랜더링");
+  }, [btnActive]);
   return (
     <Fade>
-      <div className="ContactBlock">
+      <div className="container">
         <form className="Contact-Form">
           <div className="fade">
             <div className="info-text">
               <div style={infoSubBox}>
                 <div style={textSize}>성함</div>
-                <input className="input-area"></input>
+                <input
+                  className="input-area"
+                  type="text"
+                  onChange={(e) => setUserName(e.currentTarget.value)}
+                ></input>
               </div>
               <div style={infoSubBox}>
                 <div style={textSize}>연락처</div>
-                <input className="input-area"></input>
+                <input
+                  className="input-area"
+                  type="number"
+                  onChange={(e) => setPhoneNb(e.currentTarget.value)}
+                ></input>
               </div>
             </div>
             <div style={infoSubBox}>
               <div style={textSize}>문의내용</div>
-              <textarea style={textArea}></textarea>
+              <textarea
+                style={textArea}
+                onChange={(e) => setInquiry(e.currentTarget.value)}
+              ></textarea>
             </div>
             <div style={infoSubBox}>
-              <a className="send-button" href="mailto:w_dol97@icloud.com">
+              <a
+                className="send-button"
+                href={
+                  "mailto:w_dol97@icloud.com?body=" +
+                  `${inquiry}` +
+                  " 연락처: " +
+                  `${phoneNb}` +
+                  "&subject=" +
+                  `${userName}` +
+                  " 문의"
+                }
+              >
                 메일 보내기
               </a>
             </div>

@@ -2,11 +2,12 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
+    <meta name="format-detection" content="telephone=no">
     <meta name="description" content="HC2M" />
     <meta
       name="keywords"
@@ -24,6 +25,8 @@
     <script src="%PUBLIC_URL%/js/jquery.inview.min.js"></script>
     <script src="%PUBLIC_URL%/js/script.js"></script>
 
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
     <title>HC2M</title>
   </head>
   <body>
@@ -38,7 +41,7 @@
               $('.index_container').stop().animate({opacity: 1}, 1000, 'easeInOutQuad');
             });
           });
-          var date = new Date();
+          const date = new Date();
           date.setTime( date.getTime() + ( 1 * 60 * 60 * 1000 ));
           $.cookie('isFaded', true, { expires: date });
         } else {
