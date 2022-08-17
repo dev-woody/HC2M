@@ -77,7 +77,7 @@ export const portfolioItem = [
   {
     title: "ECRIN",
     subTitle: "sub text",
-    src: process.env.PUBLIC_URL + "/images/ĖCRIN(20).JPG",
+    src: process.env.PUBLIC_URL + "/images/ECRIN(20).JPG",
   },
   {
     title: "머글와트",
@@ -100,9 +100,9 @@ export const portfolioItem = [
     src: process.env.PUBLIC_URL + "/images/aneukkam(27).JPG",
   },
   {
-    title: "ENULLUNÉ",
+    title: "ENULLUNE",
     subTitle: "sub text",
-    src: process.env.PUBLIC_URL + "/images/ENLLUNÉ(3).JPG",
+    src: process.env.PUBLIC_URL + "/images/ENLLUNE(3).JPG",
   },
   {
     title: "210바",

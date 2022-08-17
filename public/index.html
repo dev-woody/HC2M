@@ -2,54 +2,25 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1"
     />
-    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#000000" />
     <meta name="description" content="HC2M" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta
       name="keywords"
       content="HC2M,h2cm,design,space,interior,인테리어,디자인,공간"
     />
-    <meta name="theme-color" content="#000000" />
-    <meta name="apple-mobile-web-app-title" content="HC2M" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-    <script src="%PUBLIC_URL%/js/jquery-3.2.1.min.js"></script>
-    <script src="%PUBLIC_URL%/js/jquery.cookie.js"></script>
-    <script src="%PUBLIC_URL%/js/jquery.easing.js"></script>
-    <script src="%PUBLIC_URL%/js/jquery.inview.min.js"></script>
-    <script src="%PUBLIC_URL%/js/script.js"></script>
-
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-
     <title>HC2M</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script>
-      $(function(){
-        if(!$.cookie('isFaded')){
-          $('.intro_hero h1').stop().animate({opacity: 1}, 1600, 'easeInOutQuad', function(){
-            $('.intro_hero').stop().animate({opacity: 0}, 1000, 'easeInOutQuad', function(){
-              $('.intro_hero').css('display','none');
-              $('.index_container').stop().animate({opacity: 1}, 1000, 'easeInOutQuad');
-            });
-          });
-          const date = new Date();
-          date.setTime( date.getTime() + ( 1 * 60 * 60 * 1000 ));
-          $.cookie('isFaded', true, { expires: date });
-        } else {
-          $('.intro_hero').css('display','none');
-          $('.index_container').css('opacity',1);
-        };
-      });
-      </script>
     </body>
   </body>
 </html>

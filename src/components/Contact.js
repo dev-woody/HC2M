@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Fade } from "react-reveal";
 
-import "../styles/Contact.css";
-
 const infoSubBox = {
   display: "flex",
   alignItems: "flex-start",
@@ -27,14 +25,13 @@ const textArea = {
   borderRadius: "5px",
 };
 
-const Contact = ({ btnActive, setBtnActive }) => {
+const Contact = ({ setBtnActive }) => {
   const [userName, setUserName] = useState("");
   const [phoneNb, setPhoneNb] = useState("");
   const [inquiry, setInquiry] = useState("");
   useEffect(() => {
     setBtnActive("contact");
-    console.log("리랜더링");
-  }, [btnActive]);
+  }, [setBtnActive]);
   return (
     <Fade>
       <div className="container">

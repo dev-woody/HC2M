@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
+import { Fade } from "react-reveal";
 
 import { portfolioItem } from "./Contents";
 
-const Portfolio = ({ setImgZoom, setImgSrc, btnActive, setBtnActive }) => {
+const Portfolio = ({ setImgZoom, setImgSrc, setBtnActive }) => {
   const onImgShow = (src) => {
     setImgZoom(true);
     setImgSrc(src);
@@ -11,26 +12,27 @@ const Portfolio = ({ setImgZoom, setImgSrc, btnActive, setBtnActive }) => {
 
   useEffect(() => {
     setBtnActive("portfolio");
-    console.log("리랜더링");
-  }, [btnActive]);
+  }, [setBtnActive]);
   return (
     <div className="container">
       <ul className="project_list">
         {portfolioItem.map((item) => {
           return (
-            <li key={item.title}>
-              <div className="project_text fadein">
-                <h1>{item.title}</h1>
-                <h2>{item.subTitle}</h2>
-              </div>
-              <div className="project_img fadein">
-                <img
-                  src={item.src}
-                  alt="이미지 파일"
-                  onClick={(e) => onImgShow(item.src)}
-                />
-              </div>
-            </li>
+            <Fade key={item.title}>
+              <li>
+                <div className="project_text ">
+                  <h1>{item.title}</h1>
+                  <h2>{item.subTitle}</h2>
+                </div>
+                <div className="project_img ">
+                  <img
+                    src={item.src}
+                    alt="이미지 파일"
+                    onClick={(e) => onImgShow(item.src)}
+                  />
+                </div>
+              </li>
+            </Fade>
           );
         })}
       </ul>
