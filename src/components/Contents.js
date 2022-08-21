@@ -1,32 +1,33 @@
 export const portfolioItem = [
   {
     title: "PEU A PEU",
-    subTitle: "sub text",
+    subTitle:
+      "경기도 수원시 영통구 광교호수공원로 20 더샵레이크시티 상가 101동 B1 80",
     src: process.env.PUBLIC_URL + "/images/PEUAPEU(10).JPG",
   },
   {
     title: "피크닉햄퍼",
-    subTitle: "sub text",
+    subTitle: "경기 용인시 처인구 중부대로1281번길 10-13 1층 피크닉햄퍼",
     src: process.env.PUBLIC_URL + "/images/PicnicHamper(9).JPG",
   },
   {
     title: "고기장인 백정",
-    subTitle: "sub text",
+    subTitle: "경기도 화성시 동탄순환대로 406 우성스타시티 B동 1층",
     src: process.env.PUBLIC_URL + "/images/meat(1).JPG",
   },
   {
     title: "레스토랑 버건디",
-    subTitle: "sub text",
+    subTitle: "경기 수원시 팔달구 신풍로63번길 11-3 1층",
     src: process.env.PUBLIC_URL + "/images/Direction(4).JPG",
   },
   {
     title: "베이커리 달리당",
-    subTitle: "sub text",
+    subTitle: "경기 수원시 팔달구 창룡대로80번길 15 1층",
     src: process.env.PUBLIC_URL + "/images/dalridang(7).JPG",
   },
   {
     title: "DOHA's 비스트로",
-    subTitle: "sub text",
+    subTitle: "경기 용인시 기흥구 흥덕1로79번길 2 2층 202호 도하스 비스트로",
     src: process.env.PUBLIC_URL + "/images/DOHA's(12).JPG",
   },
   {
@@ -36,7 +37,7 @@ export const portfolioItem = [
   },
   {
     title: "이자카야 탄세",
-    subTitle: "sub text",
+    subTitle: "경기 광주시 경안로 14-18 정석빌딩 가동 2층 탄세",
     src: process.env.PUBLIC_URL + "/images/tanse(7).JPG",
   },
   {
@@ -46,37 +47,38 @@ export const portfolioItem = [
   },
   {
     title: "어바웃 피자",
-    subTitle: "sub text",
+    subTitle: "경기 평택시 비전6길 20-5 1층 101호",
     src: process.env.PUBLIC_URL + "/images/aboutpizza(5).JPG",
   },
   {
     title: "카페B102",
-    subTitle: "sub text",
+    subTitle: "경기 용인시 기흥구 동백중앙로 237 쥬네브스타월드 B102호",
     src: process.env.PUBLIC_URL + "/images/B102(7).JPG",
   },
   {
     title: "두플레르",
-    subTitle: "sub text",
+    subTitle: "경기 용인시 기흥구 흥덕2로65번길 15-10 101호",
     src: process.env.PUBLIC_URL + "/images/DouxFleur(4).JPG",
   },
   {
     title: "더 서울 라운지",
-    subTitle: "sub text",
+    subTitle: "서울 용산구 이태원로19길 6-4",
     src: process.env.PUBLIC_URL + "/images/TheSeoul1F(2).JPG",
   },
   {
     title: "에이크",
-    subTitle: "sub text",
+    subTitle: "경기 성남시 수정구 청계산로4길 17-1 1층 101호",
     src: process.env.PUBLIC_URL + "/images/eyck(7).JPG",
   },
   {
     title: "리안아띠",
-    subTitle: "sub text",
+    subTitle: "경기 용인시 기흥구 구성로78번길 9 삼성빌딩 113호",
     src: process.env.PUBLIC_URL + "/images/rianartti(21).JPG",
   },
   {
     title: "ECRIN",
-    subTitle: "sub text",
+    subTitle:
+      "경기 수원시 영통구 광교호수공원로 277 어뮤즈스퀘어 지하 2층 B2-193호",
     src: process.env.PUBLIC_URL + "/images/ECRIN(20).JPG",
   },
   {
