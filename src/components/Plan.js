@@ -18,17 +18,12 @@ const Plan = ({ setBtnActive }) => {
             className="container"
             style={{ minHeight: "calc(100vh - 100px)" }}
           >
-            <iframe
-              title="googleMap"
-              className=""
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6349.242629700315!2d127.114659!3d37.280406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e86ddd50d192bb7!2z6riw7Z2l6rWs7LKt!5e0!3m2!1sko!2skr!4v1660647566308!5m2!1sko!2skr"
-              styles={{ border: 0 }}
-              width="100%"
-              height="450"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <a
+              href="https://map.naver.com/v5/entry/place/1762427665?c=14139029.5974415,4478842.2189251,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt"
+              target="_blank"
+            >
+              <div id="map" className="map-box"></div>
+            </a>
             <section className="contact_contents ">
               <header className="contact_header">
                 <h1>CONTACT</h1>

@@ -10,6 +10,7 @@ import Plan from "./components/Plan";
 import { portfolioItem } from "./components/Contents";
 
 import "./styles/App.css";
+import { useCookies } from "react-cookie";
 const App = () => {
   const [imgZoom, setImgZoom] = useState(false);
   const [imgSrc, setImgSrc] = useState("");
@@ -32,7 +33,8 @@ const App = () => {
     });
   };
 
-  useEffect(() => {
+  const [cookies, setCookie, removeCookie] = useCookies(["cookiesVisite"]);
+  const onShowSplit = () => {
     $(".intro_hero h1")
       .stop()
       .animate({ opacity: 1 }, 1600, "swing", function () {
@@ -43,6 +45,15 @@ const App = () => {
             $(".index_container").stop().animate({ opacity: 1 }, 1000, "swing");
           });
       });
+    setCookie("cookiesVisite", true, { maxAge: 1000 * 60 * 60 });
+  };
+  useEffect(() => {
+    if (cookies.cookiesVisite === undefined) {
+      onShowSplit();
+    } else {
+      $(".intro_hero").css("display", "none");
+      $(".index_container").css("opacity", 1);
+    }
   }, []);
 
   useEffect(() => {

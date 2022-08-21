@@ -28,7 +28,7 @@ const About = ({ setBtnActive }) => {
           </header>
           <div className="about_text ">
             <p className="en">HC2M 인테리어입니다.</p>
-            <p className="ja">공간에서 전하는 위로와 행복</p>
+            <p className="ja">지구에 흔적을 남기자!</p>
           </div>
         </section>
       </div>

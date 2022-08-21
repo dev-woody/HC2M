@@ -23,6 +23,8 @@ const textArea = {
   border: "1px solid #000",
   boxSizing: "border-box",
   borderRadius: "5px",
+  paddingTop: "0.5rem",
+  paddingLeft: "0.5rem",
 };
 
 const Contact = ({ setBtnActive }) => {

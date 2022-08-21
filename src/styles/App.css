@@ -4767,6 +4767,7 @@ body {
   background-color: fff;
   width: 200px;
   font-size: 1.25rem;
+  padding-left: 0.5rem;
 }
 
 .text-area {
@@ -4785,6 +4786,19 @@ body {
 
 .send-button:hover {
   background-color: #dedede;
+}
+
+.map-box {
+  background: url(../../public/images/loadMap.jpg) no-repeat center left;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
