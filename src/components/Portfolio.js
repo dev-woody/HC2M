@@ -20,10 +20,10 @@ const Portfolio = ({ setImgZoom, setImgSrc, setBtnActive }) => {
           return (
             <Fade key={item.title}>
               <li>
-                <div className="project_text ">
+                {/* <div className="project_text ">
                   <h1>{item.title}</h1>
                   <h2>{item.subTitle}</h2>
-                </div>
+                </div> */}
                 <div className="project_img ">
                   <img
                     src={item.src}
